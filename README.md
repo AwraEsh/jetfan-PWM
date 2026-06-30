@@ -45,14 +45,14 @@ A smart temperature-based fan controller for JetFans (up to 13,500 RPM). An Ardu
 
 ### 1. Upload Arduino Sketch
 
-Open `sketch_jun17a_v2/sketch_jun17a_v2.ino` in the Arduino IDE, select your board and port, and upload.
+Open `main.ino` in the Arduino IDE, select your board and port, and upload.
 
 ### 2. Install PC Daemon
 
 The daemon auto-detects the Arduino via `/dev/serial/by-id/usb-Arduino*` and auto-reconnects on cable changes.
 
 ```bash
-cd sketch_jun17a_v2
+cd main
 chmod +x enable.sh
 ./enable.sh
 ```
@@ -62,7 +62,7 @@ This installs dependencies and registers the daemon as a systemd **user service*
 ### 3. Disable / Remove
 
 ```bash
-cd sketch_jun17a_v2
+cd main
 ./disable.sh
 ```
 
@@ -109,19 +109,4 @@ One-line status at `logs/jetfan-latest.txt`.
 
 ```bash
 tail -f logs/jetfan.log
-```
-
-## Files
-
-```
-PWM-jetfan/
-├── sketch_jun17a/           # Original manual PWM sketch (v1)
-├── sketch_jun17a_v2/        # PC-controlled version (v2)
-│   ├── sketch_jun17a_v2.ino # Arduino firmware
-│   ├── jetfan_daemon.py     # PC daemon
-│   ├── enable.sh            # Setup script
-│   └── disable.sh           # Removal script
-├── README.md
-├── README-fa.md
-└── .gitignore
 ```
