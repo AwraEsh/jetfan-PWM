@@ -45,14 +45,13 @@
 
 ### ۱. آپلود کد آردوینو
 
-فایل `sketch_jun17a_v2/sketch_jun17a_v2.ino` رو با Arduino IDE باز کن، بورد و پورت رو انتخاب کن و آپلود کن.
+فایل `main.ino` رو با Arduino IDE باز کن، بورد و پورت رو انتخاب کن و آپلود کن.
 
 ### ۲. نصب برنامه PC
 
 برنامه آردوینو رو از طریق `/dev/serial/by-id/usb-Arduino*` پیدا می‌کنه (فرقی نمی‌کنه به کدوم پورت وصل باشه یا هاب باشه) و خودکار وصل می‌شه.
 
 ```bash
-cd sketch_jun17a_v2
 chmod +x enable.sh
 ./enable.sh
 ```
@@ -62,7 +61,6 @@ chmod +x enable.sh
 ### ۳. حذف
 
 ```bash
-cd sketch_jun17a_v2
 ./disable.sh
 ```
 
@@ -109,19 +107,4 @@ cd sketch_jun17a_v2
 
 ```bash
 tail -f logs/jetfan.log
-```
-
-## فایل‌ها
-
-```
-PWM-jetfan/
-├── sketch_jun17a/           # کد اولیه دستی (v1)
-├── sketch_jun17a_v2/        # نسخه کنترلی با PC (v2)
-│   ├── sketch_jun17a_v2.ino # فریم‌ویر آردوینو
-│   ├── jetfan_daemon.py     # برنامه PC
-│   ├── enable.sh            # اسکریپت نصب
-│   └── disable.sh           # اسکریپت حذف
-├── README.md
-├── README-fa.md
-└── .gitignore
 ```
