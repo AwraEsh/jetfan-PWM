@@ -52,7 +52,6 @@ Open `main.ino` in the Arduino IDE, select your board and port, and upload.
 The daemon auto-detects the Arduino via `/dev/serial/by-id/usb-Arduino*` and auto-reconnects on cable changes.
 
 ```bash
-cd main
 chmod +x enable.sh
 ./enable.sh
 ```
@@ -62,7 +61,6 @@ This installs dependencies and registers the daemon as a systemd **user service*
 ### 3. Disable / Remove
 
 ```bash
-cd main
 ./disable.sh
 ```
 
